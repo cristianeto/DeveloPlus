@@ -1,0 +1,34 @@
+#mostrar-menu{
+  background: $amarillo;
+  padding-left: 1em;
+  line-height: 2.5;
+  color: $verde;
+  cursor: pointer;
+  //@include mostrar-menu($verde,1em);
+  a{
+    color: $verde;
+    &:hover{
+      color:darken($verde,10%);
+    }
+  }
+}
+.menu{
+  list-style: none;
+  margin:0;
+  padding:0;
+  background: lighten($amarillo,10%);
+  display: none;
+  &__item{
+
+  }
+
+  &__link{
+    color:$verde;
+     line-height: 2.5;
+     padding-left: 1em;
+
+    &:hover{
+      color: darken($verde,10%);
+    }
+  }
+}
