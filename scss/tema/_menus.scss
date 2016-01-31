@@ -11,24 +11,48 @@
       color:darken($verde,10%);
     }
   }
+  @include desde(web){
+    display:none;
+  }
 }
 .menu{
   list-style: none;
   margin:0;
   padding:0;
-  background: lighten($amarillo,10%);
-  display: none;
-  &__item{
 
+  @include hasta(web){
+    display: none;
+    background: lighten($amarillo,10%);
+    &__link{
+      color:$verde;
+       padding-left: 1em;
+        line-height: 2em;
+      &:hover{
+        color: darken($verde,10%);
+      }
+    }
   }
 
-  &__link{
-    color:$verde;
-     line-height: 2.5;
-     padding-left: 1em;
+  @include desde(web){
+    display: table; //para que el contenedor sea del tamanño de su contenido
+    float: right;
+    margin-top: 1.3em;
 
-    &:hover{
-      color: darken($verde,10%);
+    &__item{
+        float: left;
+    }
+    &__link{
+       line-height: 2.5;
+       color: #fff;
+       text-transform: uppercase;
+        padding: 0 1em .5em;
+        font-weight: 300;
+        font-family: $header--font-family;
+        opacity: .7;
+        border-right: 1px solid rgba(#fff,.3);
+       &:hover{
+         opacity: 1;
+       }
     }
   }
 }

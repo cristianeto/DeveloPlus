@@ -61,3 +61,12 @@ h5 {
 h6 {
   font-size : $h6--font-size;
 }
+
+/*
+Etiquetas html puras
+Ahora voy a aplicar un padding a section de toda la web
+*/
+
+section{
+  padding:1.5em 0;
+}

@@ -1,0 +1,30 @@
+.servicio{
+  text-align: center;
+  margin-bottom: 3em;
+  &__icono{
+    font-size: .9em;
+    opacity:.7;
+    @include desde(tablet){
+      font-size: 1.1em;
+    }
+    .fa{
+
+      line-height: 2em;
+      height: 2em;
+      width: 2em;
+      text-align: center;
+      background: $verde;
+      color: #fff;
+      border-radius: 50%;
+      @include desde(tablet){
+        margin-bottom: .5em;
+      }
+    }
+  }
+  &__title{
+    margin:.3em 0;
+  }
+  &__description{
+    font-size: .85em;
+  }
+}

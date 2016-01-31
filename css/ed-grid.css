@@ -35,7 +35,7 @@ a {
 .ed-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -3459,6 +3459,14 @@ h6 {
   font-size: 0.8em;
 }
 
+/*
+Etiquetas html puras
+Ahora voy a aplicar un padding a section de toda la web
+*/
+section {
+  padding: 1.5em 0;
+}
+
 #mostrar-menu {
   background: #ffde75;
   padding-left: 1em;
@@ -3475,27 +3483,73 @@ h6 {
   color: #3e554c;
 }
 
+@media screen and (min-width: 1024px) {
+  #mostrar-menu {
+    display: none;
+  }
+}
+
 .menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  background: #ffeaa8;
-  display: none;
 }
 
-.menu__link {
-  color: #547266;
-  line-height: 2.5;
-  padding-left: 1em;
+@media screen and (max-width: 1023px) {
+  .menu {
+    display: none;
+    background: #ffeaa8;
+  }
+  .menu__link {
+    color: #547266;
+    padding-left: 1em;
+    line-height: 2em;
+  }
+  .menu__link:hover {
+    color: #3e554c;
+  }
 }
 
-.menu__link:hover {
-  color: #3e554c;
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: table;
+    float: right;
+    margin-top: 1.3em;
+  }
+  .menu__item {
+    float: left;
+  }
+  .menu__link {
+    line-height: 2.5;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 1em 0.5em;
+    font-weight: 300;
+    font-family: "Roboto Condensed", sans-serif;
+    opacity: .7;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .menu__link:hover {
+    opacity: 1;
+  }
 }
 
 #header {
-  background: #547266;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    background: #547266;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    background: -webkit-linear-gradient(#547266 75%, transparent 75%);
+    background: -o-linear-gradient(#547266 75%, transparent 75%);
+    background: linear-gradient(#547266 75%, transparent 75%);
+  }
 }
 
 .logo {
@@ -3513,6 +3567,13 @@ h6 {
   color: #ffde75;
 }
 
+@media screen and (min-width: 1024px) {
+  .logo {
+    text-align: left;
+    line-height: 1;
+  }
+}
+
 .subtitle {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
@@ -3521,6 +3582,308 @@ h6 {
   letter-spacing: -0.04em;
 }
 
+@media screen and (min-width: 1024px) {
+  .subtitle {
+    text-align: left;
+    line-height: 1;
+  }
+}
+
+#footer {
+  background: #547266;
+  color: #fff;
+  font-size: .9em;
+  padding: 1em 0;
+}
+
+@media screen and (max-width: 767px) {
+  #footer {
+    text-align: center;
+  }
+}
+
+.creditos {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .creditos {
+    padding-top: 1em;
+  }
+}
+
 .banner {
   margin-top: 1em;
+  position: relative;
+}
+
+.copy {
+  margin: 0;
+}
+
+.copy__title {
+  color: #ffde75;
+  font-weight: 600;
+  margin: 0.5em 0 0.3em;
+  text-transform: uppercase;
+}
+
+.copy__title span {
+  font-weight: 300;
+  text-transform: none;
+}
+
+.copy__description {
+  font-size: .85em;
+  text-align: justify;
+}
+
+.copy__button {
+  color: #fff;
+  background: -webkit-linear-gradient(#3e554c, #293731);
+  background: -o-linear-gradient(#3e554c, #293731);
+  background: linear-gradient(#3e554c, #293731);
+  line-height: 2.5em;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0.5em 0;
+  padding: 0 1em;
+}
+
+.copy__button:hover {
+  color: #ffde75;
+}
+
+@media screen and (min-width: 768px) {
+  .copy {
+    color: #547266;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    left: 2em;
+  }
+  .copy__title {
+    font-weight: 600;
+    font-size: 2.5em;
+    font-family: "Open Sans", sans-serif;
+    color: #547266;
+    line-height: 1;
+  }
+  .copy__title span {
+    font-size: .6em;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.servicio {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.servicio__icono {
+  font-size: .9em;
+  opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+  .servicio__icono {
+    font-size: 1.1em;
+  }
+}
+
+.servicio__icono .fa {
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  background: #547266;
+  color: #fff;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .servicio__icono .fa {
+    margin-bottom: .5em;
+  }
+}
+
+.servicio__title {
+  margin: .3em 0;
+}
+
+.servicio__description {
+  font-size: .85em;
+}
+
+.clientes {
+  margin-bottom: 2em;
+}
+
+.clientes__titulo {
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.4);
+  margin-bottom: 0;
+}
+
+.clientes__nav {
+  width: 20%;
+  height: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+  .clientes__nav {
+    width: 30%;
+  }
+}
+
+.clientes__nav__item {
+  width: 50%;
+  height: 2em;
+  opacity: .7;
+  position: relative;
+}
+
+.clientes__nav__item:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.clientes__nav__item--prev {
+  float: left;
+  background: #547266;
+}
+
+.clientes__nav__item--prev:before {
+  border-right: 6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.clientes__nav__item--next {
+  float: right;
+  background: #ffde75;
+}
+
+.clientes__nav__item--next:before {
+  border-left: 6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.cliente {
+  margin-bottom: 2em;
+}
+
+.cliente__img {
+  display: block;
+  margin: auto;
+}
+
+.cliente__title {
+  font-size: 1.1em;
+  margin: 0.5em 0 0.3em;
+}
+
+.cliente__description {
+  font-size: .85em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #clientes .ed-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+  #clientes .ed-container > ed-item, #clientes .ed-container > .ed-item {
+    width: calc(50% - 1em);
+    margin: 0.5em;
+  }
+}
+
+.noticia {
+  margin-bottom: 2em;
+}
+
+.noticia__img {
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.noticia__title {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.noticia__title span {
+  display: block;
+  font-size: 0.8;
+  font-weight: 300;
+}
+
+.noticia__desription {
+  font-size: .85em;
+}
+
+/*  Aqui va codigo que se va a repetir en cualquier pagina de la web
+*/
+.section-title {
+  text-align: center;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 1.5em;
+}
+
+.section-title span {
+  display: block;
+  font-size: .7em;
+}
+
+.sociales {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.sociales__item {
+  font-size: 1.1em;
+  color: #547266;
+  display: inline-block;
+  margin: .3em;
+  transition: all 0.2s;
+}
+
+.sociales__item i {
+  line-height: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  background: #3e554c;
+  border-radius: 50%;
+}
+
+.sociales__item:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .sociales {
+    padding-top: 0;
+    text-align: right;
+  }
+}
+
+#footer .sociales i {
+  text-align: center;
 }

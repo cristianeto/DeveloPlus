@@ -1,3 +1,63 @@
 .banner{
   margin-top: 1em;
+  position: relative;
 }
+
+.copy{
+  margin:0;
+  &__title{
+    color: $amarillo;
+    font-weight: 600;
+    margin:.5em 0 .3em;
+    text-transform: uppercase;
+    span{
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+  &__description{
+    font-size: .85em;
+    text-align: justify;
+  }
+  &__button{
+      color:#fff;
+      background: -webkit-linear-gradient(darken($verde,10%), darken($verde,20%));
+      background: -o-linear-gradient(darken($verde,10%), darken($verde,20%));
+      background: linear-gradient(darken($verde,10%), darken($verde,20%));
+
+      line-height: 2.5em;
+      display:inline-block;
+      border-radius: 3px;
+      margin:0.5em 0;
+      padding: 0 1em;
+
+      &:hover{
+        color:$amarillo;
+      }
+
+    }
+}
+
+@include desde(tablet){
+  .copy{
+    color:$verde;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40%;
+    left:2em;
+
+    &__title{
+      font-weight: 600;
+      font-size: 2.5em;
+      font-family: $body--font-family;
+      color:$verde;
+      line-height: 1;
+      span{
+        font-size: .6em;
+        display: block;
+        line-height: 1;
+      }
+    }
+  }
+};

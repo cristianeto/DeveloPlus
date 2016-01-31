@@ -1,0 +1,30 @@
+.sociales{
+  text-align: center;
+  padding-top: 1em;
+  &__item{
+    font-size: 1.1em;
+    color:$verde;
+    display: inline-block;
+    margin: .3em;
+    transition: all .2s;
+    i{
+      line-height: 1.5em;
+      height: 1.5em;
+      width: 1.5em;
+      background: darken($verde, 10%);
+      border-radius: 50%;
+    }
+    &:hover{
+      color: #fff;
+    }
+  }
+  #footer & {
+    @include desde(tablet){
+      padding-top: 0;
+      text-align: right;
+    };
+    i{
+      text-align: center;
+    }
+  }
+}
